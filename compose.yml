@@ -1,1 +1,19 @@
-Update this file to add the content
+version: "3.8"
+
+services:
+  personal-api:
+    image: "sathyapm1006/22it046-personal-api"
+    ports:
+      - "5005:5000"  
+    restart: always
+  personal-api-2:
+    image: "reenayasotha/22it039-personal-api"
+    ports:
+      - "5505:5000"  
+    restart: always
+
+  ml-model:
+    image: "meghasreek25/ml-model:latest"  # Replace with your actual image name
+    ports:
+      - "6000:6000"  # Adjust if needed
+    restart: always
